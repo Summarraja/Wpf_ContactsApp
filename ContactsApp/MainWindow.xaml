@@ -1,0 +1,39 @@
+﻿<Window x:Class="ContactsApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ContactsApp"
+        mc:Ignorable="d"
+        Title="Login Window"  Height="400" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Grid Background="#FFBED4E4" >
+        <Grid Height="300" Width="350" Margin="22,53,22,18">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB7D3E8" Offset="0"/>
+                    <GradientStop Color="#FFB7D3E8" Offset="1"/>
+                    <GradientStop Color="#FF3F4E57" Offset="0.187"/>
+                    <GradientStop Color="#FF3F4E57" Offset="0.813"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <TextBox x:Name="username" VerticalContentAlignment="Center" Height="30" Margin="113,95,37,175"  FontSize="18"  Width="200" LostFocus="usernameLostFocus" Visibility="Collapsed" />
+            <TextBox x:Name="usernamePlaceHolder" Text="Username" VerticalContentAlignment="Center" Height="30" Margin="113,95,37,175"  FontSize="18"  Width="200" Opacity="0.5" GotFocus="usernamePlaceholderGotFocus" />
+
+            <PasswordBox x:Name="password"  VerticalContentAlignment="Center"  Height="30" Margin="113,151,37,119"  Width="200" FontSize="18" FontFamily="Microsoft Sans Serif" LostFocus="passwordLostFocus" Visibility="Collapsed" />
+            <PasswordBox x:Name="passwordPlaceholder" Password="000000000000" VerticalContentAlignment="Center"  Height="30" Margin="113,151,37,119"  Width="200" FontSize="18" FontFamily="Microsoft Sans Serif" Opacity="0.5" GotFocus="passwordPlaceholderGotFocus" />
+
+            <Button Content=""  HorizontalAlignment="Left" VerticalAlignment="Top" Width="64" Height="30" Click="Button_Click" Margin="249,212,0,0" FontFamily="Microsoft Sans Serif" FontSize="14" BorderBrush="#FF0E0D0D">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Icons/login.jpg"/>
+                </Button.Background>
+            </Button>
+            <Ellipse Margin="15,95,252,112" RenderTransformOrigin="0.25,0.5">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="Icons/username.png" Stretch="Fill" />
+                </Ellipse.Fill>
+            </Ellipse>
+            <Label x:Name="prompt" Content="" HorizontalAlignment="Left" Margin="114,183,0,0" VerticalAlignment="Top" Width="151" FontFamily="Malgun Gothic" FontSize="14" Foreground="#FFEE7551"/>
+        </Grid>
+        <Label Content="Enter your login Credidentials" HorizontalContentAlignment="Center" HorizontalAlignment="Center"  VerticalAlignment="Top" Height="40" Width="350" FontSize="22" Margin="22,9,22,0"/>
+    </Grid>
+</Window>
